@@ -1,0 +1,103 @@
+{
+  "features": [
+    "gst_monthly_sales",
+    "gst_filing_consistency",
+    "gst_growth_rate",
+    "upi_monthly_volume",
+    "upi_txn_count",
+    "bank_balance_trend",
+    "cash_flow_stability",
+    "avg_monthly_revenue",
+    "avg_monthly_expenses",
+    "profit_margin",
+    "invoice_payment_delay",
+    "customer_diversity",
+    "vendor_diversity",
+    "employee_count",
+    "epfo_compliance",
+    "utility_bill_timeliness",
+    "loan_history",
+    "credit_utilization",
+    "debt_ratio",
+    "seasonality",
+    "business_age",
+    "existing_loans",
+    "aa_cashflow",
+    "monthly_inflow",
+    "monthly_outflow",
+    "npa_history",
+    "fraud_flag",
+    "returned_payments",
+    "tax_delay",
+    "digital_adoption_score"
+  ],
+  "cat_cols": [
+    "business_category",
+    "location"
+  ],
+  "cat_maps": {
+    "business_category": {
+      "Agriculture": 0,
+      "Hospitality": 1,
+      "Manufacturing": 2,
+      "Retail": 3,
+      "Services": 4,
+      "Wholesale": 5
+    },
+    "location": {
+      "Metro": 0,
+      "Rural": 1,
+      "Tier-1": 2,
+      "Tier-2": 3,
+      "Tier-3": 4
+    }
+  },
+  "classes": [
+    "Healthy",
+    "Moderate",
+    "Risky"
+  ],
+  "feature_importance": {
+    "employee_count": 0.32448965311050415,
+    "fraud_flag": 0.15105600655078888,
+    "npa_history": 0.13797752559185028,
+    "cash_flow_stability": 0.0914420560002327,
+    "gst_filing_consistency": 0.07448845356702805,
+    "digital_adoption_score": 0.035429202020168304,
+    "epfo_compliance": 0.026635667309165,
+    "customer_diversity": 0.020901767536997795,
+    "utility_bill_timeliness": 0.018186572939157486,
+    "aa_cashflow": 0.01667262427508831,
+    "loan_history": 0.01348927803337574,
+    "debt_ratio": 0.009869790636003017,
+    "invoice_payment_delay": 0.009512054733932018,
+    "profit_margin": 0.008912098594009876,
+    "gst_monthly_sales": 0.007554983254522085,
+    "vendor_diversity": 0.005486814305186272,
+    "upi_monthly_volume": 0.0050767273642122746,
+    "upi_txn_count": 0.004457672592252493,
+    "avg_monthly_revenue": 0.004060591571033001,
+    "monthly_inflow": 0.0038102474063634872,
+    "tax_delay": 0.0037471444811671972,
+    "avg_monthly_expenses": 0.0035449257120490074,
+    "credit_utilization": 0.0033278039190918207,
+    "monthly_outflow": 0.0030896214302629232,
+    "business_age": 0.0030088131316006184,
+    "bank_balance_trend": 0.0022726075258105993,
+    "gst_growth_rate": 0.0020047384314239025,
+    "returned_payments": 0.002004466950893402,
+    "business_category": 0.0019276412203907967,
+    "existing_loans": 0.0018562735058367252,
+    "location": 0.0018531999085098505,
+    "seasonality": 0.0018528889631852508
+  },
+  "metrics": {
+    "accuracy": 0.9794,
+    "f1_macro": 0.98,
+    "precision_macro": 0.981,
+    "recall_macro": 0.979,
+    "roc_auc_ovr_macro": 0.9993,
+    "n_train": 35000,
+    "n_test": 10050
+  }
+}

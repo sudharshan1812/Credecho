@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: radial-gradient(1200px 600px at 15% -10%, rgba(124,92,255,.18), transparent),
+              radial-gradient(1000px 500px at 100% 0%, rgba(34,211,238,.12), transparent),
+              #0a0e1a;
+  color: #e6e9f2;
+}
+.glass {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+}
+.grad-text { background: linear-gradient(90deg,#7c5cff,#22d3ee); -webkit-background-clip: text; background-clip: text; color: transparent; }

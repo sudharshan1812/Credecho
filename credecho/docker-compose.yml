@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: credecho
+      POSTGRES_PASSWORD: credecho
+      POSTGRES_DB: credecho
+    ports: ["5432:5432"]
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+  redis:
+    image: redis:7-alpine
+    ports: ["6379:6379"]
+  backend:
+    build: { context: ., dockerfile: backend/Dockerfile }
+    environment:
+      CREDECHO_SECRET: change-me-in-prod
+      DATABASE_URL: postgresql+psycopg://credecho:credecho@db:5432/credecho
+    ports: ["8000:8000"]
+    depends_on: [db, redis]
+  frontend:
+    build: { context: ./frontend }
+    environment:
+      NEXT_PUBLIC_API_URL: http://localhost:8000
+    ports: ["3000:3000"]
+    depends_on: [backend]
+volumes:
+  pgdata:
